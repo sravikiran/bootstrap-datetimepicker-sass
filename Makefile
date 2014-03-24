@@ -1,3 +1,4 @@
+# NOTE this build file doesn't seem to work on Windows
 deps:
 	git submodule init
 	git submodule update

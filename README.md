@@ -30,7 +30,7 @@ Include necessary scripts and styles:
 
 ## Things that should probably be fixed
 
-1. I can't get `make` to work locally, it crashes. Probably a good idea to use a different build system, maybe `grunt`?
-2. The `make` file only generates from LESS, not SASS.
+1. I can't get `make` to work locally on Windows, it crashes. Probably a good idea to use a different build system, maybe `grunt`?
+2. The `make` file only generates from LESS, not SASS. It looks like there are no SASS compilation binaries for Windows... maybe need to use `grunt` for `grunt-sass`?
 3. There are no tests, not even an example HTML file to demonstrate how it works (I guess that's what the Github.io pages were for). It would be good to add them.
 4. An issue I'd like to fix: [Add options to disable displaying Months or Years views](https://github.com/Eonasdan/bootstrap-datetimepicker/issues/252)

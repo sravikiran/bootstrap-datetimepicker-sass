@@ -1,18 +1,18 @@
 {
-  "name": "bootstrap-datetimepicker",
+  "name": "bootstrap-datetimepicker-sass",
   "filename": "js/bootstrap-datetimepicker.min.js",
   "version": "3.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/eonasdan/bootstrap-datetimepicker.git"
+    "url": "git://github.com/soundasleep/bootstrap-datetimepicker-sass.git"
   },
   "keywords": [
     "twitter-bootstrap",
-    "bootstrap",
+    "bootstrap-sass",
     "datepicker",
     "datetimepicker",
     "timepicker",
-	"moment"
+    "moment"
   ],
   "devDependencies": {
     "uglify-js": "*",
