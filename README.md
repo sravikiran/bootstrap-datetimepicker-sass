@@ -1,4 +1,4 @@
-# Bootstrap v3 datetimepicker widget ![GitHub version](https://badge.fury.io/gh/Eonasdan%2Fbootstrap-datetimepicker.png)
+# Bootstrap v3 datetimepicker widget using SASS ![GitHub version](https://badge.fury.io/gh/Eonasdan%2Fbootstrap-datetimepicker.png)
 
 ![DateTimePicker](http://i.imgur.com/nfnvh5g.png)
 
@@ -6,6 +6,8 @@
 
 ##Where do you use this?
 I'd love to know if your public site is using this plugin and list your logo on the documentation site. Please email me `eonasdan at outlook dot com`. Do not submit issue/feature request to this email, they will be ignored.
+
+This is a fork of [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) that simply provides SASS equivalents of `src/less/*.less` files.
 
 ## See the [Change Log](#change-log) for important changes and updates.
 
