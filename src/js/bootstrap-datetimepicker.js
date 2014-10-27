@@ -115,7 +115,7 @@ THE SOFTWARE.
             }
             picker.format = picker.options.format;
 
-            longDateFormat = pMoment()._lang._longDateFormat;
+            longDateFormat = pMoment()._locale._longDateFormat;
 
             if (!picker.format) {
                 picker.format = (picker.options.pickDate ? longDateFormat.L : '');
@@ -330,7 +330,7 @@ THE SOFTWARE.
 		fillDow = function () {
 		    pMoment.lang(picker.options.language);
 		    var html = $('<tr>'), weekdaysMin = pMoment.weekdaysMin(), i;
-		    if (pMoment()._lang._week.dow == 0) { // starts on Sunday
+		    if (pMoment()._locale._week.dow == 0) { // starts on Sunday
 		        for (i = 0; i < 7; i++) {
 		            html.append('<th class="dow">' + weekdaysMin[i] + '</th>');
 		        }
