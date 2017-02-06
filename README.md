@@ -34,3 +34,7 @@ Include necessary scripts and styles:
 2. The `make` file only generates from LESS, not SASS. It looks like there are no SASS compilation binaries for Windows... maybe need to use `grunt` for `grunt-sass`?
 3. There are no tests, not even an example HTML file to demonstrate how it works (I guess that's what the Github.io pages were for). It would be good to add them.
 4. An issue I'd like to fix: [Add options to disable displaying Months or Years views](https://github.com/Eonasdan/bootstrap-datetimepicker/issues/252)
+
+## Fix for prev and next year button issue when we set minDate and maxDate in options
+1. 'Next' Icon in date range filter is always disabled for year selection.
+2. 'Prev' Icon is not restricted based on minDate.
