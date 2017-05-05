@@ -1154,6 +1154,12 @@ THE SOFTWARE.
             if (picker.viewDate) update();
         };
 
+       picker.setCustomDate = function (date) {
+            if (date == undefined) return;  
+            picker.setValue(date);
+            picker.widget.show();
+        };
+        
         init();
     };
 
