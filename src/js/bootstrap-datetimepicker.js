@@ -204,7 +204,8 @@ THE SOFTWARE.
             if (picker.isInput) {
                 return picker.element;
             } else {
-                return dateStr = picker.element.find('input');
+                var dateStr = picker.element.find('input');
+                return dateStr;
             }
         },
 
@@ -883,7 +884,7 @@ THE SOFTWARE.
             // (for example: picker.options.enabledDates['2014-02-27'] === true)
             var givenDatesIndexed = {};
             var givenDatesCount = 0;
-            for (i = 0; i < givenDatesArray.length; i++) {
+            for (let i = 0; i < givenDatesArray.length; i++) {
                 dDate = pMoment(givenDatesArray[i]);
                 if (dDate.isValid()) {
                     givenDatesIndexed[dDate.format("YYYY-MM-DD")] = true;
