@@ -201,11 +201,11 @@ THE SOFTWARE.
         },
 
         getPickerInput = function () {
+            let dateStr;
             if (picker.isInput) {
                 return picker.element;
             } else {
-                var dateStr = picker.element.find('input');
-                return dateStr;
+                return dateStr = picker.element.find('input');
             }
         },
 
@@ -332,11 +332,11 @@ THE SOFTWARE.
 		    pMoment.lang(picker.options.language);
 		    var html = $('<tr>'), weekdaysMin = pMoment.weekdaysMin(), i;
 		    if (pMoment()._locale._week.dow == 0) { // starts on Sunday
-		        for (i = 0; i < 7; i++) {
+		        for (let i = 0; i < 7; i++) {
 		            html.append('<th class="dow">' + weekdaysMin[i] + '</th>');
 		        }
 		    } else {
-		        for (i = 1; i < 8; i++) {
+		        for (let i = 1; i < 8; i++) {
 		            if (i == 7) {
 		                html.append('<th class="dow">' + weekdaysMin[0] + '</th>');
 		            } else {
@@ -407,7 +407,7 @@ THE SOFTWARE.
                     }
                 }
                 if (picker.options.daysOfWeekDisabled) {
-                    for (i in picker.options.daysOfWeekDisabled) {
+                    for (let i in picker.options.daysOfWeekDisabled) {
                         if (prevMonth.day() == picker.options.daysOfWeekDisabled[i]) {
                             clsName += ' disabled';
                             break;
@@ -429,7 +429,7 @@ THE SOFTWARE.
             if (currentYear + 1 > endYear) {
                 picker.widget.find('.datepicker-months th:eq(2)').addClass('disabled');
             }
-            for (i = 0; i < 12; i++) {
+            for (let i = 0; i < 12; i++) {
                 if ((year == startYear && startMonth > i) || (year < startYear)) {
                     $(months[i]).addClass('disabled');
                 } else if ((year == endYear && endMonth < i) || (year > endYear)) {
@@ -449,7 +449,7 @@ THE SOFTWARE.
                 picker.widget.find('.datepicker-years').find('th:eq(2)').addClass('disabled');
             }
             year -= 1;
-            for (i = -1; i < 11; i++) {
+            for (let i = -1; i < 11; i++) {
                 html += '<span class="year' + (i === -1 || i === 10 ? ' old' : '') + (currentYear === year ? ' active' : '') + ((year < startYear || year > endYear) ? ' disabled' : '') + '">' + year + '</span>';
                 year += 1;
             }
@@ -462,9 +462,9 @@ THE SOFTWARE.
             table.parent().hide();
             if (picker.use24hours) {
                 current = 0;
-                for (i = 0; i < 6; i += 1) {
+                for (let i = 0; i < 6; i += 1) {
                     html += '<tr>';
-                    for (j = 0; j < 4; j += 1) {
+                    for (let j = 0; j < 4; j += 1) {
                         html += '<td class="hour">' + padLeft(current.toString()) + '</td>';
                         current++;
                     }
@@ -473,9 +473,9 @@ THE SOFTWARE.
             }
             else {
                 current = 1;
-                for (i = 0; i < 3; i += 1) {
+                for (let i = 0; i < 3; i += 1) {
                     html += '<tr>';
-                    for (j = 0; j < 4; j += 1) {
+                    for (let j = 0; j < 4; j += 1) {
                         html += '<td class="hour">' + padLeft(current.toString()) + '</td>';
                         current++;
                     }
@@ -489,9 +489,9 @@ THE SOFTWARE.
             var table = picker.widget.find('.timepicker .timepicker-minutes table'), html = '', current = 0, i, j, step = picker.options.minuteStepping;
             table.parent().hide();
             if (step == 1) step = 5;
-            for (i = 0; i < Math.ceil(60 / step / 4) ; i++) {
+            for (let i = 0; i < Math.ceil(60 / step / 4) ; i++) {
                 html += '<tr>';
-                for (j = 0; j < 4; j += 1) {
+                for (let j = 0; j < 4; j += 1) {
                     if (current < 60) {
                         html += '<td class="minute">' + padLeft(current.toString()) + '</td>';
                         current += step;
@@ -507,9 +507,9 @@ THE SOFTWARE.
         fillSeconds = function () {
             var table = picker.widget.find('.timepicker .timepicker-seconds table'), html = '', current = 0, i, j;
             table.parent().hide();
-            for (i = 0; i < 3; i++) {
+            for (let i = 0; i < 3; i++) {
                 html += '<tr>';
-                for (j = 0; j < 4; j += 1) {
+                for (let j = 0; j < 4; j += 1) {
                     html += '<td class="second">' + padLeft(current.toString()) + '</td>';
                     current += 5;
                 }
@@ -815,7 +815,7 @@ THE SOFTWARE.
         isInFixed = function () {
             if (picker.element) {
                 var parents = picker.element.parents(), inFixed = false, i;
-                for (i = 0; i < parents.length; i++) {
+                for (let i = 0; i < parents.length; i++) {
                     if ($(parents[i]).css('position') == 'fixed') {
                         inFixed = true;
                         break;
@@ -1083,7 +1083,7 @@ THE SOFTWARE.
                 return;
             // Ignore event if in the middle of a picker transition
             var collapse = picker.widget.find('.collapse'), i, collapseData;
-            for (i = 0; i < collapse.length; i++) {
+            for (let i = 0; i < collapse.length; i++) {
                 collapseData = collapse.eq(i).data('collapse');
                 if (collapseData && collapseData.date - transitioning)
                     return;
